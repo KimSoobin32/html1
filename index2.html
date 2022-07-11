@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML1.0 1일차 기본태그 배우기</title>
+</head>
+<body>
+<!-- img태그 :  이미지를 가져올 때 사용
+[속성]
+src - 경로 url
+width - 가로크기, height  - 세로크기
+-->
+<img src="https://item.kakaocdn.net/do/64942ddc97d5c177a94681a1988e99c9617ea012db208c18f6e83b1a90a7baa7">
+<br>
+<img src="./222.png" width="100" height="100"><br><br>
+<!-- 
+절대경로 : http,https 로 시작하여 적용하는 url주소 
+상대경로 : ./, ../를 이용하여 디렉토리별 경로주소를 설정
+<img src="http://127.0.0.1//html1/2.png">
+-->
+
+<a href = "http://www.naver.com">네이버</a>
+<!-- a tag : 페이지 이동
+href (속성) - 경로 -->
+<br>
+<a href="./index1.html">이전페이지</a>
+<br><br>
+<a href="http://nate.com"><font color="red">네이트닷컴</font></a>
+<!-- a 태그 사용 시 a 태그 안에 하위 태그를 적용해야 함 
+target(속성) : 웹페이지 이동을 어떤 형식으로 할 것인지 정함
+_self : 현재 오픈된 페이지에서 이동
+_blank : 새로운 탭에서 페이지 이동
+_top : 모바일에서 최상위 탭으로 이동
+_new : 모바일에서 신규탭으로 이동
+-->
+<br>
+<a href="http://google.com" target="_self">구글</a><br>
+<a href="http://daum.net" target="_blank">다음</a><br>
+<a href="http://nate.com" target="_top">네이트</a><br>
+<a href="http://nate.com" target="_new">네이트2</a><br>
+<!-- top, new 모바일용, 모바일 신규탭은 new, top은 모바일 무조건 최상위에 올라옴 -->
+<!-- blank 써야 트래픽 올릴 수 있음 - 이벤트페이지 -->
+<!-- 기본은 self -->
+</body>
+</html>

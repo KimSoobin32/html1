@@ -1,0 +1,36 @@
+<html lang="ko">
+<!-- lang="ko" : 한국어 주로 쓰겠다 -->
+<head>
+<meta charset="utf-8">
+<title>HTML3.0 기본태그3</title>
+</head>
+<body>
+<input type="text" style="width:200px; height:30px;">
+<br>
+<input type="button" value="로그인" style="width:100px; height:100px;">
+<!-- 
+style : ;(세미콜론) 넣어줘야 함
+(input은 그냥 width,height 때리면 안먹음.. style에 써줘야 함)
+px : pixel, pc와 모바일 모두 사용
+외국 단위 : em, in, inch, 모바일에서는 %, vh, vw 씀  -->
+<!-- tabindex 속성: tab 누르면 이동하는 순서, 커서가 탭키를 누를 경우 이동하는 순서를 정할 때 사용하는 속성
+focus : 커서 깜빡깜빡 -->
+<br><br>
+<form method="post" action="http://nate.com">
+<table border="1" cellpadding="0" cellspacing="0">
+<tr height="40">
+<td width="100">아이디</td>
+<td width="300" align="center"><input type="text" style="width:280px; height:30px;" tabindex="1"></td>
+<td width="150" rowspan="2" align="center"><input type="submit" value="로그인" style="width:130px; height:70px;" tabindex="3"></td>
+</tr>
+<tr height="40">
+<td>패스워드</td>
+<td align="center"><input type="password" style="width:280px; height:30px;" tabindex="2"></td>
+</tr>
+<tr height="40">
+<td colspan="3"><input type="checkbox">자동 로그인</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

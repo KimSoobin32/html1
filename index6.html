@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML3.0 기본태그2</title>
+</head>
+<body>
+<!-- select : 사용자가 범위 안의 내용을 선택할 때 사용, 선택 태그 , 부모태그
+option : 자식태그 -->
+<select>
+<option>skt</option>
+<option>lgt</option>
+<option>kt</option>
+<option>알뜰폰</option>
+</select>
+<br>
+<!-- textarea : 사용자가 많은 양의 내용을 입력하고자 할 때 사용
+cols : 줄당 몇글자
+rows : 몇줄
+내용이 초과되면 자동으로 스크롤 생성 됨
+안에 주석 쓰면 안됨..(주석도 그대로 출력 됨)
+-->
+<textarea cols="50" rows="10">
+이용약관
+
+
+
+</textarea>
+<br><br>
+<!-- form : 사용자가 입력한 데이터를 전송하기 위한 태그
+submit, reset은 form 태그 안에 있어야 함
+submit : 제출, form과 사용을 같이 하며 키보드 enter키를 누를 경우 작동
+reset : 입력 초기화
+type button은 js와 함께 사용해야 작동 됨, form과 사용 함께/단독 모두 사용 가능, 무조건 마우스 클릭 작동-->
+<form method="post" action="http://naver.com">
+<input type="text">
+<br>
+<input type="checkbox">sms 수신
+<br>
+<input type="password">
+<br>
+<input type="submit" value="전송"><br>
+<input type="button" value="전송2" onclick="abc()">
+<input type="reset" value="취소">
+</form>
+</body>
+</html>
+<script>
+function abc() {
+	location.href="http://nate.com";
+}
+</script>

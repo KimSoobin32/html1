@@ -1,0 +1,67 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>HTML 2일차 padding, margin</title>
+<style>
+body{margin:0; padding:0;}
+.box1{
+	width:100px; 
+	height:100px; 
+	background-color: yellow;
+	/*margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;*/
+	margin:10px 50px 10px 10px;	/*시계방향, 4방향 모두 같은 숫자일 때는 하나만 써도 됨*/
+	float:left;	/*내 기준으로 왼쪽에 붙어라*/
+}
+/* margin-bottom: 자신 기준으로 아래쪽에 있는 오브젝트를 밑으로 밀어냄 */
+/*float left 왼쪽기준으로 붙음, right 오른쪽 기준으로 붙음(정렬), center 모든 오브젝트 가운데로 집합*/
+.box2{
+	width:100px; 
+	height:100px; 
+	background-color: blue;
+	float:left;
+}
+.box3{
+	width:100px; 
+	height:100px; 
+	background-color: green;
+	clear:both;	/*원래 자기 위치로.. 적용 안하면 float left 적용되어서 겹침.. */
+}
+/*clear:both - float 초기화*/
+.ulcss{
+	list-style:none;
+	margin:0;
+	padding:0;
+	float: right;
+	margin-right:10px;	/*통째로 움질일 때는 부모때그에 써줘야 함, 자식에 넣으줄 경우 각각 li마다 여백 적용 됨*/
+}
+/*ul, ol 사용 시 list-style:none; margin:0; padding:0; 필수*/
+.licss{
+	width:200px;
+	height:30px;
+	border: 1px solid black;
+	float:left;
+	text-align: center;
+	line-height:30px;
+	
+	
+}
+/* 자식li에는 float left, (자식에서 right 하면 역순으로 나옴), 부모 ul을 right하면 오른쪽 정렬 가능 ..
+float은 부모태그 기준으로 */
+</style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+<ul class="ulcss">
+	<li class="licss">1</li>
+	<li class="licss">2</li>
+	<li class="licss">3</li>
+	<li class="licss">4</li>
+	<li class="licss">5</li>
+</ul>
+</body>
+</html>

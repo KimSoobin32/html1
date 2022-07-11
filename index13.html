@@ -1,0 +1,62 @@
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>HTML 2일차 padding</title>
+<style>
+body{padding:0; margin:0;}	/*!!!기본 코드!!!*/
+/*부모태그가 width가 없을 경우 자동적으로 100% 적용됨 (빈공간까지 모두 사용= 작동되버리는 오류)
+자식태그 width와 맞춰줘야 함, float를 사용하지 않을 경우 높이는 자동적으로 적용됨*/
+.olcss{
+	width: 150px;
+	list-style: none;
+	margin:0;
+	padding:0;
+	border:1px solid red;
+}
+.licss{
+	width: 140px;
+	height: 30px;
+	border:1px solid black;
+	/*padding-left: 10px;*/
+	padding:0px 0px 0px 10px;
+	/*padding 적용 시 width값이 늘어나므로  적용시킨 padding값 만큼 width를 줄여줘야 함!!!*/
+	
+}
+.licss:hover{/*마우스를 위로 올리면 작동*/
+	background-color: green;
+}
+/*자식태그에서 float 써버려서 부모태그에서 height,width 값이 사라진 상태 -> 부모태그에서 크기를 적용해줘야함 (기본크기+border크기까지 적용해줘야 함)*/
+.olcss2{
+	width: 760px;	/*자식 사이즈에 맞게 부모가 맞춰야 함*/
+	height: 32px;	/*border px까지 계산해야함!! 30-> 32*/
+	list-style: none;
+	margin:0;
+	padding:0;
+	border:1px solid red;
+}
+.licss2{
+	width: 150px;
+	height: 30px;
+	border:1px solid black;
+	float:left;
+}
+</style>
+</head>
+<body>
+<ol class="olcss">
+<li class="licss">메뉴1</li>
+<li class="licss">메뉴2</li>
+<li class="licss">메뉴3</li>
+<li class="licss">메뉴4</li>
+<li class="licss">메뉴5</li>
+</ol>
+
+<ol class="olcss2">
+<li class="licss2">메뉴1</li>
+<li class="licss2">메뉴2</li>
+<li class="licss2">메뉴3</li>
+<li class="licss2">메뉴4</li>
+<li class="licss2">메뉴5</li>
+</ol>
+</body>
+</html>
