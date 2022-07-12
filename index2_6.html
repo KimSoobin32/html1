@@ -1,0 +1,116 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+<title>사이트 전체 레이아웃</title>
+<style>
+/* base code */
+body{margin:0; padding:0;}
+span{display: block;}
+ul,ol{list-style: none; margin:0; padding: 0;}
+/* base code 따로 분리*/
+
+.top{width: 1200px; height: 40px; background-color: #ccc; margin:0 auto;}
+/*센터 맞추기 : margin:0 auto(static, relative), 단 position : absolute 면 안먹음..
+position : absolute 에 margin:0 auto; (x)
+*/
+.top_span{ height: 40px; }
+
+.top_ol{height: 40px; width:300px; float:right;
+position: relative;
+ }
+.top_li{width:75px; height: 40px; text-align: center; line-height: 40px; float:left;
+font-size: 12px; }
+
+.bluebox{
+	width: 1200px; height: 400px; background-color: royalblue; margin: 0 auto;
+    position: relative; text-align: center;
+    }
+
+.disc{
+	width: 15px; height: 15px; background-color: black; float: left;
+    margin-left: 10px; border-radius: 100%; 
+    }
+
+.red{background-color: red; margin-left:0;}
+
+.aa{
+    position:absolute;  
+	height:15px;
+	/*border:1px solid red;*/
+	width:120px;
+	left:50%;
+	bottom:25px;
+	margin-left:-60px;
+}
+
+/*float 쓸 때는 width , height 지정해줘야 함*/
+
+.menu{
+    background-color: skyblue;
+    width: 1170px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 15px;
+
+}
+
+.greenbox{
+    width: 240px;
+    height: 50px;
+    background-color: chartreuse;
+    float: left;
+
+}
+
+.purplebox{
+    width: 600px;
+    height: 50px;
+    background-color: purple;
+    float: right;
+}
+
+
+</style>
+</head>
+<body>
+<!-- 최상단(로그인~고객센터) -->
+<div class ="top">
+<span class ="top_span">
+<ol class="top_ol">
+	<li class="top_li">HOME</li>
+	<li class="top_li">LOGIN</li>
+	<li class="top_li">MEMBER</li>
+	<li class="top_li">CUSTOMER</li>
+
+</ol>
+
+</span>
+</div>
+<!-- 상단 메뉴 파트 -->
+<!--  
+<div class="menu">
+
+</div>-->
+
+    <div class="menu">
+        <div class="greenbox"></div>
+        <div class="purplebox"></div>
+    </div>
+
+<!-- 배너 파트 -->
+
+<div class="bluebox">
+    <div class="aa">
+	    <span class="disc red"></span>	
+	    <span class="disc"></span>	
+	    <span class="disc"></span>	
+	    <span class="disc"></span>
+	    <span class="disc"></span>
+    </div>
+</div>
+
+<!-- 상품출력 파트 -->
+
+</body>
+</html>

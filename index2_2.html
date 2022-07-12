@@ -1,0 +1,70 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 CSS2.0 응용 및 검색바 만들기</title>
+<style>
+body{padding:0; margin:0;}
+.box{width:100px; height:100px; background-color: orange;
+	border-radius: 0 50px 50px 0;
+
+}
+/*border-radius : 왼쪽 상단, 오른상, 오른하, 왼하*/
+.box2{
+	width:100px; height:100px; background-color: green;
+	border-radius: 50px 0px 50px 50px;
+}
+.btn{width:200px; height:30px; background-color: orange; color:red; border:0;}
+.mid{width:200px; height:30px; border:0; border-bottom: 1px solid gray;}
+
+.search{ 
+	width:586px; height:57px;
+	background-image: url("./search.png");
+	position: relative;
+}
+.s{
+	width:450px; height:50px;
+	position: absolute; top:3px; left:3px;
+	border:0; font-size: 16px; font-weight: bold;
+	outline:none; text-indent: 5px;
+}
+
+
+.urlbox{list-style: none; margin:0; padding:0;
+	width:330px; height:88px;
+	background-color: white; border: 1px solid blue;
+
+}
+.libox{width:110px; height:45px; float:left;}/*img 태그 사용하면 height 안지정해도 됨, 넓이 지정해주면 초과시 알아서 아랫줄로 내려감*/
+.libox2{width:110px; height: 43px; float:left;}
+
+
+
+</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box2"></div>
+<input type="button" value="회원가입" class="btn">
+<input type="text" class="mid">
+<br><br>
+
+<form name="f" id="f" method="get" action="https://search.naver.com/search.naver">
+<div class="search">
+<input type="text" name="query" class="s">
+</div>
+</form>
+<br><br>
+
+
+<ul class="urlbox">
+	<li class="libox"><a href="https://www.gmarket.co.kr"><img src="./logo_quick_01.png"></a></li>
+		<li class="libox"><a href="https://auction.co.kr"><img src="./logo_quick_02.png"></a></li>
+		<li class="libox"><img src="./logo_quick_03.png"></li>
+	<li class="libox2"><img src="./logo_quick_04.png"></li>
+		<li class="libox2"><img src="./logo_quick_05.png"></li>
+		<li class="libox2"><a href="https://coupang.com"><img src="./logo_quick_06.png"></a></li>
+</ul>
+
+
+</body>
+</html>

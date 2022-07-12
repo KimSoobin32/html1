@@ -1,0 +1,51 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 HTML4.0</title>
+<style>
+body{padding:0; margin:0;}
+div{width: 100px; height: 100px;}
+.a{background-color: orange; position: static;}/*오른쪽 보내기 못함(모니터 크기 상관없이)*/
+.b{background-color: green; position: relative; left:100%; margin-left: -100px;} /*right 안먹음*/
+.c{background-color: gray;}/*static*/
+.d{background-color: blue; position: absolute; right:0px;}
+/*한 css class에 left,rigth 동시 사용 금지, 가로스크롤 생성 금지*/
+/* 
+static-기본, margin 밖에 못씀
+relative 마진 , top/left/right/bottom 둘다 씀, 내 밑 태그 관계없이 나만 움직임, 자기 영역 있음
+absolute 자신영역 없이 모두가 자기 영역(브라우져 사이즈), 마진 없이 top/left/right/bottom만 씀
+
+position : 오브젝트의 성격을 변화시킬 때 사용하는 속성
+static (고정), relative(중간형태), absolute(자유분방함)
+*/
+
+.popup{width:600px; height:600px; background-color: yellowgreen; display: block;
+		position: relative;}
+.close{width: 50px; height: 50px; background-color: gray;
+	position:absolute; left:100%; color:white; font-size: 25px; font-weight: bold; 
+	text-align: center; line-height: 50px;
+}
+/*자식이 absolute 일 경우 부모는 무조건 relative로 셋팅 해야 함*/
+/*부모가 relative 여야 자녀 absolute가 부모밖으로 안나감.. (부모 static이면 밖으로 튀어나감)
+부모 absolute면 자식은 relative여야 함
+*/
+/*부모에 마진(margin-rightt) 써도 안먹음..*/
+
+</style>
+</head>
+<body>
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+<br><br>
+<span class="popup" id="popup">
+<div class="close" onclick="abc()">X</div>
+</span>
+</body>
+<script>
+function abc() {
+	document.getElementById("popup").style.display="none";
+}
+</script>
+</html>

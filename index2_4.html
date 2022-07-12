@@ -1,0 +1,80 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 3일차 CSS2.0 (오브젝트 모양 만들기)</title>
+<style>
+body{padding:0; margin:0;}
+.ab{position: absolute; right:0px; bottom:0px;}
+.blue{width:320px; height: 240px; background-color: blue; position:relative;}
+.red{width:160px; height: 240px; background-color: red; }
+.green{width:160px; height: 160px; background-color: green;}
+.yellowgreen{width:80px; height: 120px; background-color: yellowgreen;}
+.yellow{width:80px; height: 60px; background-color: yellow;}
+.black{width:50px; height: 60px; background-color: black;}
+.purple{width:50px; height: 40px; background-color: purple;}
+.grey{width:20px; height: 40px; background-color: grey;}
+.pink{width:20px; height: 20px; background-color: pink;}
+
+
+.box1{width:320px; height: 240px; background-color: blue; position: relative;}
+span{display: block;}
+.box2{width:160px; height: 240px; background-color: red; position: absolute; right:0;}
+.box3{width:80px; height: 120px; background-color: green; position: absolute; right:0; bottom: 0; padding-left: 80px; padding-top: 40px;}
+
+.box4{width:80px; height: 60px; background-color: yellowgreen; padding-top: 60px;}
+.box5{ width:80px; height: 60px; background-color: yellow; position: relative;}
+.box6{width:50px; height: 60px; background-color: black; position: absolute; right:0;}
+.box7{width:50px; height: 40px; background-color: purple; position: relative; margin-top: 20px;}
+.box8{width: 20px; height: 40px; background-color: grey; position: absolute; top:20px; right: 0;}
+.box9{width:20px; height: 20px; background-color: pink; position: absolute; right:0; top:40px;}
+</style>
+</head>
+<!-- 
+총 9개의 박스가 있으며 각각의 박스에 맞는 색상을 넣어 주시길 바랍니다.
+전체박스 크기는 320 * 240 입니다.
+색상코드는 blue, red, green, yellowgreen, yellow, black, purple, grey,pink 입니다.
+사이즈는 다음과 같습니다.
+
+blue: 320*240
+red: 160 * 240
+green: 160 * 120
+yellowgreen: 80 * 120
+yellow: 80 * 60
+black: 50 * 60
+purple: 50 * 40
+grey: 20 * 40
+pink: 20 * 20
+ -->
+
+<body>
+
+ <div class="blue">
+	<div class="red ab"></div>
+	<div class="green ab"></div>
+	<div class="yellowgreen ab"></div>
+	<div class="yellow ab"></div>
+	<div class="black ab"></div>
+	<div class="purple ab"></div>
+	<div class="grey ab"></div>
+	<div class="pink ab"></div>
+</div>
+<br><br>
+
+<div class="box1">
+	<span class="box2"></span>
+	<span class="box3">
+		<div class="box4">
+			<span class="box5">
+				<div class="box6">
+					<span class="box7"></span>
+					<span class="box8"></span>
+					<span class="box9"></span>
+				
+				</div>
+			</span>
+		</div>
+	</span>
+</div>
+
+</body>
+</html>
