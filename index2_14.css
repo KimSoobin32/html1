@@ -1,0 +1,63 @@
+@charset "UTF-8";
+body{margin:0; padding:0;}
+span,label{display: block;}
+ol,ul{list-style:none; padding:0; margin:0;}
+
+.box1{width:100px; height: 100px; background-color: orange;
+	padding-left: 50px;
+}
+.box2{width:100px; height: 100px; background-color: green;
+	padding-left: 50px; box-sizing: border-box;
+}
+/* box-sizing : border-box => padding, border도 적용 되어짐*/
+
+.box3{width:100px; height: 100px; border:1px solid red;}/*전체 크기 102픽셀이 됨*/
+.box4{width:100px; height: 100px; border:1px solid red; box-sizing: border-box;}/*선이 안쪽으로 들어가서 전체크기 100픽셀 됨*/
+
+/*dom 객체*/
+.ul_css > li:nth-child(1){/*인덱스 1부터 시작 주의!!*/
+	color:red;
+}
+.ul_css > li:nth-child(4){
+	color:red;
+}
+.ul_css > li:nth-child(5){
+	color:red;
+}
+
+/*node 객체*/
+.ol_css > li:nth-of-type(2){
+	color:blue;
+}
+.ol_css > li:nth-of-type(3){
+	color:blue;
+}
+/* > : 내부 전체*/
+/*
+:nth-child (DOM) - 자식태그를 순서대로 나열함
+:nth-of-type (NODE) - 태그끼리 별도로 숫자를 나열함(카운팅)
+*/
+
+.div1 > span:nth-child(4){color:red;}/*dom : 인덱스가 그냥 순서대로 매겨짐 12345*/
+.div2 > span:nth-of-type(3){color:red;}/*node : 자기 태그끼리 인덱스 매겨짐.. span123, label12*/
+.div2 > label:nth-of-type(1){color:blue;}
+/* !!node 사용 추천, 자바스크립트 사용 시 영향*/
+
+/*dom*/
+.object1{}
+.object1 > span{width:50px; height: 50px; background-color: blue;}
+.object1 > span:nth-child(2) {
+	background-color: yellow;
+}
+.object1 > span:nth-child(odd) {/*odd : 홀수 번호, even : 짝수 번호*/
+	background-color: red;
+}
+
+/*node*/
+.object2{}
+.object2 > span, .object2 > label {
+	width:50px; height: 50px; background-color: blue;
+}
+.object2 > span:nth-of-type(even), .object2 >label:nth-of-type(odd) {
+	background-color: yellowgreen;
+}
